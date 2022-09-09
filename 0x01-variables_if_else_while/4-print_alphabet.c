@@ -9,15 +9,15 @@
  */
 int main(void)
 {
-	int letter;
+	int letters;
 
-	for (letter = 'a'; letter <= 'z'; letter++)
+	for (letters = 'a'; letters <= 'z'; letters++)
 	{
-		if (letter == 'q' || letter == 'e')
+		if (letters  == 'q' || letters == 'e')
 		{
 			continue;
 		}
-		putchar(letter);
+		putchar(letters);
 	}
 	putchar('\n');
 	return (0);
