@@ -61,13 +61,4 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
-void print_result(char *src, int length)
-{
-	int i;
 
-	for (i = 0; i < length; i++)
-	{
-		if (src[i] >= '0' && src[i] <= '9')
-		printf("%c", src[i]);
-	}
-}
