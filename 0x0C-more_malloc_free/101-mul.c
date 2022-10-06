@@ -61,3 +61,27 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
+/**
+ * getLengthOfNum - length of numbers in a string
+ *
+ * @str: pointer to string of numbers
+ *
+ * Return: integer (SUCCESS) or
+ * NULL, if string includes char
+ */
+
+int getLengthOfNum(char *str)
+{
+	int i = 0;
+
+	while (str[i])
+	{
+		if (str[i] >= '0' && str[i] <= '9')
+			i++;
+		else
+			return ('\0');
+
+	}
+
+	return (i);
+}
