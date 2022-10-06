@@ -14,16 +14,21 @@ void add_nums(char *final_prod, char *next_prod, int next_len);
  *
  * Return: The length of the string.
  */
-int find_len(char *str)
+int getLengthOfNum(char *str)
 {
-	int len = 0;
+	int i = 0;
 
-	while (*str++)
-		len++;
+	while (str[i])
+	{
+		if (str[i] >= '0' && str[i] <= '9')
+			i++;
+		else
+			return ('\0');
 
-	return (len);
+	}
+
+	return (i);
 }
-
 /**
  * create_xarray - Creates an array of chars and initializes it with
  *                 the character 'x'. Adds a terminating null byte.
