@@ -1,11 +1,12 @@
 /*
  * File: 101-mul.c
- * Auth: Brennan D Baraban
+ * 
  */
 
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
+
 
 int find_len(char *str);
 char *create_xarray(int size);
