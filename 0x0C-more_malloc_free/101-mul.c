@@ -60,21 +60,21 @@ int getLengthOfNum(char *str);
 // 	return (0);
 // }
 
-// /**
-//  * find_len - Finds the length of a string.
-//  * @str: The string to be measured.
-//  *
-//  * Return: The length of the string.
-//  */
-// int find_len(char *str)
-// {
-// 	int len = 0;
+/**
+ * find_len - Finds the length of a string.
+ * @str: The string to be measured.
+ *
+ * Return: The length of the string.
+ */
+int find_len(char *str)
+{
+	int len = 0;
 
-// 	while (*str++)
-// 		len++;
+	while (*str++)
+		len++;
 
-// 	return (len);
-// }
+	return (len);
+}
 
 /**
  * getLengthOfNum - length of numbers in a string
