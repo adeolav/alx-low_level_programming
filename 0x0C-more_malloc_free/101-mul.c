@@ -9,71 +9,96 @@ void get_prod(char *prod, char *mult, int digit, int zeroes);
 void add_nums(char *final_prod, char *next_prod, int next_len);
 int getLengthOfNum(char *str);
 
+// /**
+//  * main - entry point, multiplies two numbers
+//  *
+//  * @argc: integer, length of @argv
+//  *
+//  * @argv: one-dimensional array of strings, arguments of this program
+//  *
+//  * Return: 0, success
+//  */
+
+// int main(int argc, char *argv[])
+// {
+// 	int num1_length, num2_length;
+// 	char *result;
+
+// 	if (argc != 3)
+// 	{
+// 		printf("Error\n");
+// 		exit(98);
+// 	}
+
+// 	num1_length = getLengthOfNum(argv[1]);
+
+// 	if (!num1_length)
+// 	{
+// 		printf("Error\n");
+// 		exit(98);
+// 	}
+
+// 	num2_length = getLengthOfNum(argv[2]);
+
+// 	if (!num2_length)
+// 	{
+// 		printf("Error\n");
+// 		exit(98);
+// 	}
+
+// 	result = malloc(num1_length + num2_length);
+
+// 	if (!result)
+// 		return (1);
+
+// 	populateResult(result, argv[1], num1_length, argv[2], num2_length);
+
+// 	print_result(result, num1_length + num2_length);
+// 	printf("\n");
+// 	free(result);
+
+// 	return (0);
+// }
+
+// /**
+//  * find_len - Finds the length of a string.
+//  * @str: The string to be measured.
+//  *
+//  * Return: The length of the string.
+//  */
+// int find_len(char *str)
+// {
+// 	int len = 0;
+
+// 	while (*str++)
+// 		len++;
+
+// 	return (len);
+// }
+
 /**
- * main - entry point, multiplies two numbers
+ * getLengthOfNum - length of numbers in a string
  *
- * @argc: integer, length of @argv
+ * @str: pointer to string of numbers
  *
- * @argv: one-dimensional array of strings, arguments of this program
- *
- * Return: 0, success
+ * Return: integer (SUCCESS) or
+ * NULL, if string includes char
  */
 
-int main(int argc, char *argv[])
+int getLengthOfNum(char *str)
 {
-	int num1_length, num2_length;
-	char *result;
+	int i = 0;
 
-	if (argc != 3)
+	while (str[i])
 	{
-		printf("Error\n");
-		exit(98);
+		if (str[i] >= '0' && str[i] <= '9')
+			i++;
+		else
+			return ('\0');
+
 	}
 
-	num1_length = getLengthOfNum(argv[1]);
-
-	if (!num1_length)
-	{
-		printf("Error\n");
-		exit(98);
-	}
-
-	num2_length = getLengthOfNum(argv[2]);
-
-	if (!num2_length)
-	{
-		printf("Error\n");
-		exit(98);
-	}
-
-	result = malloc(num1_length + num2_length);
-
-	if (!result)
-		return (1);
-
-	populateResult(result, argv[1], num1_length, argv[2], num2_length);
-
-	print_result(result, num1_length + num2_length);
-	printf("\n");
-	free(result);
-
-	return (0);
-}
-
-/**
- * find_len - Finds the length of a string.
- * @str: The string to be measured.
- *
- * Return: The length of the string.
- */
-int find_len(char *str)
-{
-	int len = 0;
-
-	while (*str++)
-		len++;
-
-	return (len);
+	return (i);
 }
 
 /**
