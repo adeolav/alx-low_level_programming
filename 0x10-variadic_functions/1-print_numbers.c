@@ -1,5 +1,20 @@
 #include "variadic_functions.h"
+
+#include <stdio.h>
+
 #include <stdarg.h>
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * print_numbers - prints numbers followed by newline
@@ -7,9 +22,13 @@
  * @n: number of ints to be passed
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
+
 {
-	unsigned int i;
-	va_list list;
+
+	va_start(nums, n);
+
+
+	unsigned int index;
 
 	va_start(list, n);
 
