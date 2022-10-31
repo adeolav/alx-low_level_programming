@@ -1,6 +1,6 @@
 /*
  * File: 100-elf_header.c
- * 
+ * Auth: Adewunmi V Oladele 
  */
 
 #include <elf.h>
